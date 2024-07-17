@@ -6,10 +6,10 @@
 
 use std::fmt::{self, Display, Formatter};
 use std::ptr::NonNull;
-use std::vec::*;
+use std::vec::*;                       
 
 #[derive(Debug)]
-struct Node<T> {
+struct Node<T> {              
     val: T,
     next: Option<NonNull<Node<T>>>,
 }
