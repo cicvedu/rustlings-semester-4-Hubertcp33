@@ -51,8 +51,7 @@ mod tests {
             .duration_since(std::time::UNIX_EPOCH)
             .unwrap()
             .as_secs();
-        // 动态设置TEST_FOO环境变量
-        env::set_var("TEST_FOO", timestamp.to_string());
+        
         
         let s = std::env::var("TEST_FOO").unwrap();
         let e: u64 = s.parse().unwrap();
